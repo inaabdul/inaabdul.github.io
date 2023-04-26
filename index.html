@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/user.png">
+    <script src="https://kit.fontawesome.com/a1503a92a6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Web Portfolio</title>
+  </head>
+  <body>
+    <!-- Awal Home & Navbar -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <h2>My Portfolio</h2>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <h1>Hi, I'm Ina Abdul <span>Nasir</span></h1>
+          <br />
+          <p>I'm <span id="auto-input"></span></p>
+        </div>
+        <a href="file/CV (INA ABDUL NASIR).pdf" download class="btn btn2">Download CV</a>
+      </div>
+    </div>
+    <!-- Akhir Home & Navbar -->
+    <!-- Awal About -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="img/fotoina.jpg" data-aos="fade-up" data-aos-duration="1000"/>
+          </div>
+          <div class="about-col-2" data-aos="fade-down" data-aos-duration="1000">
+            <h1 class="subtittle">About Me</h1>
+            <br />
+            <p>Perkenalkan Nama Saya Ina Abdul Nasir, Saya Berusia 19 Tahun, Asal Saya Dari Purwakarta. Saya Adalah Mahasiswa Kampus UBSI Cikampek Semester 4 Dan Saya Mengambil Prodi Sistem Informasi (SI)</p>
+            <div class="tab-titles">
+              <p class="tab-links">Education</p>
+            </div>
+            <div class="tab-content">
+              <ul>
+                <li>
+                  <span>2015 - 2018</span><br />
+                  SMP NEGERI 1 CIBATU
+                </li>
+                <br />
+                <li>
+                  <span>2018 - 2021</span><br />
+                  SMA NEGERI 1 CIBATU
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir About -->
+    <!-- Awal Portfolio -->
+    <div id="portfolio">
+      <div class="container">
+        <div class="subtittle" data-aos="fade-left" data-aos-duration="1000">My Project</div>
+        <div class="project-list">
+          <div class="project" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="50">
+            <img src="img/project-1.png">
+            <div class="layer" >
+              <h3>SIBERSHOP</h3>
+              <p>Sibershop Adalah Sistem Informasi Barbershop Berbasis Web</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square" style="color: #00ffd5;"></i></a>
+            </div>
+          </div>
+          <div class="project" data-aos="zoom-in"  data-aos-duration="2000" data-aos-delay="100">
+            <img src="img/project-1.png">
+            <div class="layer">
+              <h3>SIBERSHOP</h3>
+              <p>Sibershop Adalah Sistem Informasi Barbershop Berbasis Web</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square" style="color: #00ffd5;"></i></a>
+            </div>
+          </div>
+          <div class="project" data-aos="zoom-in" data-aos-duration="3000" data-aos-delay="150"> 
+            <img src="img/project-1.png">
+            <div class="layer">
+              <h3>SIBERSHOP</h3>
+              <p>Sibershop Adalah Sistem Informasi Barbershop Berbasis Web</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square" style="color: #00ffd5;"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+    <!-- Akhir Portfolio -->
+    <!-- Awal Contact -->
+    <div id="contact">
+      <div class="row">
+        <div class="contact-1" data-aos="fade-right" data-aos-duration="1000">
+          <div class="subtittle">Contact Me</div>
+          <p><i class="fa-solid fa-envelope facon"></i>inanasir44@gmail.com</p>
+          <p><i class="fa-solid fa-phone facon"></i>+62 813 - 8788 - 1037</p>
+          <div class="social-icon">
+            <a href="https://github.com/inaabdul"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ina-abdul-nasir-917728262/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/inaaabdull/"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="contact-2" data-aos="fade-left" data-aos-duration="1000">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Nama" placeholder="Nama Lengkap" required>
+            <input type="email" name="Email" placeholder="Email" required>
+            <textarea name="Pesan" rows="6" placeholder="Pesan"></textarea>
+            <button type="submit" class="btn btn3">Kirim</button>
+          </form>
+          <span id="psn"></span>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir Contact -->
+    <!-- JavaScript -->
+    <!-- Sidemenu Icon -->
+    <script>
+
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu(){
+        sidemenu.style.right = "0";
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+      }
+
+    </script>
+    <!-- Contact Form -->
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwx55DUUaLj4ZFSUGZ937bEtUfXP3qZZZ0C6pFjf2mOhQz9g3PRRpJoFWBau9bSixag/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const psn = document.getElementById("psn")
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            psn.innerHTML = "Pesan Telah Dikirim"
+            setTimeout(function(){
+              psn.innerHTML = ""
+            }, 5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    <!-- TypedJS -->
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#auto-input', {
+        strings: ['Student', 'Footballer'],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+      });
+    </script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- JavaScript -->
+  </body>
+</html>
